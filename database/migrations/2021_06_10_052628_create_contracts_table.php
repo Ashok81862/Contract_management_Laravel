@@ -15,6 +15,7 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable();
             $table->date('contract_date')->nullable();
             $table->string('subject')->nullable();
             $table->longText('full_text')->nullable();
