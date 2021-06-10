@@ -253,6 +253,11 @@ return [
             'url'  => '/admin/contracts',
             'icon' => 'nav-icon fas fa-fw fa-file-contract',
         ],
+        [
+            'text' => 'Change Password',
+            'url'  => '/admin/password',
+            'icon' => 'nav-icon fas fa-fw fa-key',
+        ],
 
     ],
 
