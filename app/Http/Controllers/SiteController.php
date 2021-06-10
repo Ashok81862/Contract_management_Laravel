@@ -8,6 +8,8 @@ class SiteController extends Controller
 {
     public function home()
     {
-        return view('/');
+        if(auth()->user()->role == 'Admin')
+            return redirect('/admin');
+        return redirect('/');
     }
 }
