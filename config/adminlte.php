@@ -247,6 +247,11 @@ return [
             'url'  => '/admin/users',
             'icon' => 'nav-icon fas fa-fw fa-users',
         ],
+        [
+            'text' => 'Contracts',
+            'url'  => '/admin/contracts',
+            'icon' => 'nav-icon fas fa-fw fa-file-contract',
+        ],
 
 
     ],
