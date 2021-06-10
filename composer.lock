@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "1c2da415edbd23d2b375541d1303511e",
-
-    "content-hash": "f66076e81ada8c32dae8328369cd45ad",
-
+    "content-hash": "c0710f202ea3f10a896654aaa49c0755",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -1004,7 +1000,6 @@
             "time": "2021-04-26T09:17:50+00:00"
         },
         {
-
             "name": "jeroennoten/laravel-adminlte",
             "version": "v3.6.1",
             "source": {
@@ -1032,7 +1027,38 @@
                 "laravel": {
                     "providers": [
                         "JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider"
-
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeroenNoten\\LaravelAdminLte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen Noten",
+                    "email": "jeroennoten@me.com"
+                }
+            ],
+            "description": "Easy AdminLTE integration with Laravel",
+            "keywords": [
+                "AdminLTE",
+                "admin",
+                "administrator",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/jeroennoten/Laravel-AdminLTE/issues",
+                "source": "https://github.com/jeroennoten/Laravel-AdminLTE/tree/v3.6.1"
+            },
+            "time": "2021-06-08T06:26:03+00:00"
+        },
+        {
             "name": "laravel/fortify",
             "version": "v1.7.13",
             "source": {
@@ -1066,17 +1092,12 @@
                 "laravel": {
                     "providers": [
                         "Laravel\\Fortify\\FortifyServiceProvider"
-
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-
-                    "JeroenNoten\\LaravelAdminLte\\": "src/"
-
                     "Laravel\\Fortify\\": "src/"
-
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1085,24 +1106,6 @@
             ],
             "authors": [
                 {
-
-                    "name": "Jeroen Noten",
-                    "email": "jeroennoten@me.com"
-                }
-            ],
-            "description": "Easy AdminLTE integration with Laravel",
-            "keywords": [
-                "AdminLTE",
-                "admin",
-                "administrator",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/jeroennoten/Laravel-AdminLTE/issues",
-                "source": "https://github.com/jeroennoten/Laravel-AdminLTE/tree/v3.6.1"
-            },
-            "time": "2021-06-08T06:26:03+00:00"
-
                     "name": "Taylor Otwell",
                     "email": "taylor@laravel.com"
                 }
@@ -1117,7 +1120,6 @@
                 "source": "https://github.com/laravel/fortify"
             },
             "time": "2021-05-25T16:35:21+00:00"
-
         },
         {
             "name": "laravel/framework",
