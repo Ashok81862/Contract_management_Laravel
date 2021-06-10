@@ -11,8 +11,8 @@
         <div class="card-header border-bottom-0">
             <h3 class="card-title text-bold" style="font-size:1.4rem">All Users</h3>
             <div class="card-tools">
-                <a href="{{ route('admin.users.export') }}" class="btn btn-sm btn-info">
-                    <i class="fas fa-fw fa-plus-circle mr-1"></i>
+                <a href="{{ route('admin.users.export') }}" class="btn btn-sm btn-success">
+                    <i class="fas fa-fw fa-file-excel mr-1"></i>
                     <span>Export Clients</span>
                 </a>
                 <a href="{{ route('admin.users.create') }}" class="btn btn-sm btn-info">
