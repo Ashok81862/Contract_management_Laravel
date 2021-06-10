@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Exports\UserExport;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Excel;
 use App\Services\MediaService;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
@@ -145,5 +147,10 @@ class UserController extends Controller
     {
         return redirect()->route('admin.users.index')
             ->with('error', 'You cannot delete an user!');
+    }
+
+    public function export(Excel $excel, UserExport $export)
+    {
+        return $excel->download($export, 'users.xlsx');
     }
 }
