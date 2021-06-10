@@ -245,6 +245,7 @@ return [
         [
             'text' => 'Users',
             'url'  => '/admin/users',
+            'can'   =>  'Admin',
             'icon' => 'nav-icon fas fa-fw fa-users',
         ],
         [

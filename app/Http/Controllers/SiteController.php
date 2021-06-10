@@ -10,6 +10,6 @@ class SiteController extends Controller
     {
         if(auth()->user()->role == 'Admin')
             return redirect('/admin');
-        return redirect('/');
+        return redirect('/admin');
     }
 }
