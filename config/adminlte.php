@@ -254,7 +254,6 @@ return [
             'icon' => 'nav-icon fas fa-fw fa-file-contract',
         ],
 
-
     ],
 
     /*
