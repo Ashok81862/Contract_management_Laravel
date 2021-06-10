@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Contract;
 use App\Models\User;
+use App\Models\Contract;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Excel;
+use App\Exports\ContractExport;
+use App\Http\Controllers\Controller;
 
 class ContractController extends Controller
 {
@@ -128,5 +130,10 @@ class ContractController extends Controller
 
         return redirect()->route('admin.contracts.index')
             ->with('success', 'Contract has been deleted successfully!!');
+    }
+
+    public function export(Excel $excel, ContractExport $export)
+    {
+        return $excel->download($export, 'contracts.xlsx');
     }
 }

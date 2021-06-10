@@ -27,6 +27,7 @@ Route::middleware([ 'admin',])->prefix('admin')->name('admin.')->group(function(
     Route::get('users/export', [\App\Http\Controllers\Admin\UserController::class, 'export'])->name('users.export');
     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 
+    Route::get('contracts/export', [\App\Http\Controllers\Admin\ContractController::class, 'export'])->name('contracts.export');
     Route::resource('contracts', \App\Http\Controllers\Admin\ContractController::class);
 
     Route::get('password', [\App\Http\Controllers\Admin\AdminController::class, 'password']);
