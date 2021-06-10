@@ -25,4 +25,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 
+    Route::resource('contracts', \App\Http\Controllers\Admin\ContractController::class);
+
 });
