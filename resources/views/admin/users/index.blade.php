@@ -4,6 +4,9 @@
 
 @section('content')
 
+    <x-alert />
+    <x-delete />
+
     <div class="card">
         <div class="card-header border-bottom-0">
             <h3 class="card-title text-bold" style="font-size:1.4rem">All Users</h3>
