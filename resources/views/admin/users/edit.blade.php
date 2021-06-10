@@ -14,7 +14,7 @@
 
 @section('content')
 
-    {{-- <x-alert /> --}}
+    <x-alert />
 
     <div class="card">
         <div class="card-header">
