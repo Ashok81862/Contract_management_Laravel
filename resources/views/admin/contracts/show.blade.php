@@ -10,10 +10,12 @@
         <div class="card-header">
             <h3 class="card-title text-bold" style="font-size:1.4rem">Contract Details</h3>
             <div class="card-tools">
+                @can('Admin')
                 <a href="{{ route('admin.contracts.edit', $contract->id) }}" class="btn btn-primary btn-sm">
                     <i class="fas fa-fw fa-edit mr-1"></i>
                     <span>Edit</span>
                 </a>
+                @endcan
 
                 <a href="{{ route('admin.contracts.index') }}" class="btn btn-sm btn-info">
                     <i class="fas fa-fw fa-arrow-left mr-1"></i>
