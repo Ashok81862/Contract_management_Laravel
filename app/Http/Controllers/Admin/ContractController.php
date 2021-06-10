@@ -28,7 +28,7 @@ class ContractController extends Controller
      */
     public function create()
     {
-        $users = User::select(['id', 'name'])->get();
+        $users = User::where('role', '!=', 'Admin')->select(['id', 'name'])->get();
 
         return view('admin.contracts.create', compact('users'));
     }
@@ -43,7 +43,7 @@ class ContractController extends Controller
     {
         $request->validate([
             'user_id'   =>  ['nullable', 'exists:users,id'],
-            'contract_date' => ['nullable','date_format:' . config('panel.date_format')],
+            'contract_date' => ['nullable','string'],
             'subject' =>   ['nullable', 'string','max:100'],
             'full_text' => ['nullable'],
             'is_signed' =>  ['nullable', 'boolean'],
@@ -55,7 +55,7 @@ class ContractController extends Controller
             'contract_date' =>  $request->contract_date,
             'subject'   =>  $request->subject,
             'full_text' =>  $request->full_text,
-            'is_signed' => $request->is_active ? true : false,
+            'is_signed' => $request->is_signed ? true : false,
         ]);
 
         return redirect()->route('admin.contracts.index')
@@ -81,9 +81,9 @@ class ContractController extends Controller
      */
     public function edit(Contract $contract)
     {
-        $users = User::select(['id', 'name'])->get();
+        $users = User::where('role', '!=', 'Admin')->select(['id', 'name'])->get();
 
-        return view('admin.contracts.create', compact('users','contract'));
+        return view('admin.contracts.edit', compact('users','contract'));
     }
 
     /**
@@ -96,8 +96,8 @@ class ContractController extends Controller
     public function update(Request $request, Contract $contract)
     {
         $request->validate([
-            'user_id'   =>  ['nullable', 'exists:users,id,'.$contract->user_id],
-            'contract_date' => ['nullable','date_format:' . config('panel.date_format')],
+            'user_id'   =>  ['nullable', 'exists:users,id'],
+            'contract_date' => ['nullable','string'],
             'subject' =>   ['nullable', 'string','max:100'],
             'full_text' => ['nullable'],
             'is_signed' =>  ['nullable', 'boolean'],
@@ -109,7 +109,7 @@ class ContractController extends Controller
             'contract_date' =>  $request->contract_date,
             'subject'   =>  $request->subject,
             'full_text' =>  $request->full_text,
-            'is_signed' => $request->is_active ? true : false,
+            'is_signed' => $request->is_signed ? true : false,
         ]);
 
         return redirect()->route('admin.contracts.index')
