@@ -13,8 +13,7 @@ class UserController extends Controller
 {
     protected $roles = [
         'User',
-        'Admin',
-        'RetailSales'
+        'Admin'
     ];
 
     /**
